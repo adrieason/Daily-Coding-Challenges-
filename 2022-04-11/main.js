@@ -1,66 +1,28 @@
-/* There was a test in your class and you passed it. Congratulations!
-But you're an ambitious person. You want to know if you're better than the average student in your class.
+/*Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
 
-You receive an array with your peers' test scores. Now calculate the average and compare your score!
+Example:
 
-Return True if you're better, else False!
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
 
-Note:
+None of the arrays will be empty, so you don't have to worry about that! */
 
-Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!*/
+function removeEveryOther(arr){
+  let newArr = []
+  for (i=0;i<arr.length;i++){
+    if ((i % 2 === 0)||i === 0){
+      newArr.push(arr[i]);
+    }
+  }    return newArr;
 
-function betterThanAverage(classPoints, yourPoints) {
-  let total = 0
-  for (i=0;i<=(classPoints.length-1);i++){
-    total = total + classPoints[i]
   }
-  let average = total / (classPoints.length)
-  if (yourPoints > average){
-    return true
-  }else{
-    return false
-  }
-}
 
-/*Make multiple functions that will return the sum, difference, modulus, product, quotient, and the exponent respectively.
-
-Please use the following function names:
-
-addition = add
-
-multiply = multiply
-
-division = divide (both integer and float divisions are accepted)
-
-modulus = mod
-
-exponential = exponent
-
-subtraction = subt
-
-Note: All math operations will be: a (operation) b*/
-
-function add(a,b){
-  return a + b
-}
-
-function divide(a,b){
-  return a/b
-}
-
-function multiply(a,b){
-  return a*b
-}
-
-function mod(a,b){
-  return a%b
-}
- 
-function exponent(a,b){
-  return Math.pow(a,b)
-}
+  /*Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).*/
   
-function subt(a,b){
-  return a-b
-}
-
+  function powersOfTwo(n){
+    let nums = []
+    let pows
+    for (i=0;i<=n;i++){
+      nums[i]=Math.pow(2,i)
+    }
+    return nums
+  }
