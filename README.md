@@ -1,8 +1,6 @@
 # Daily-Coding-Challenges- Challenges: [Visit Here](https://www.codewars.com/users/adrieason)
 
-<a href="https://www.codewars.com/users/adrieason"><img src="https://www.codewars.com/users/adrieason/badges/large" alt="Github Stats" border="0"></a>
-
-A repository that included all of my Daily Coding Challenges.  I do at least one codewars challenge everyday of the week.
+A repository that included all of my Daily Coding Challenges.  I do at least one coding challenge a day. 
 
 ## How It's Made:
 
