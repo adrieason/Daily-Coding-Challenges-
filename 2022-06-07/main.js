@@ -1,37 +1,19 @@
-/*Build a function that returns an array of integers from n to 1 where n>0.
+/* This Kata is intended as a small challenge for my students
 
-Example : n=5 --> [5,4,3,2,1]*/
+All Star Code Challenge #18
 
-const reverseSeq = n => {
-  let arr = []
-  for (i=1;i<=n;i++){
-    arr.push(i)
-  }
-  return arr.reverse()
-};
+Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
 
-/*This function should test if the factor is a factor of base.
+If no occurrences can be found, a count of 0 should be returned.
 
-Return true if it is a factor or false if it is not.*/
-
-function checkForFactor (base, factor) {
-  if (base%factor===0){
-    return true
-  }else{
-    return false
-  }
-}
-
-/*Given a string str, reverse it omitting all non-alphabetic characters.
-
-Example
-
-For str = "krishan", the output should be "nahsirk".
-
-For str = "ultr53o?n", the output should be "nortlu".
 
 */
 
-function reverseLetter(str) {  
-  return str.split('').reverse().join('').replace(/[^A-Za-z]/g, "")
+function strCount(str, letter){  
+  let sum = 0 
+  for (i=0;i<str.length;i++){
+    if (str[i]===letter)
+      sum += 1
+  }
+    return sum
   }

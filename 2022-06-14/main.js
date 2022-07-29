@@ -1,20 +1,15 @@
-/*Numbers ending with zeros are boring.
+/*Inspired by the development team at Vooza, write the function that
 
-They might be fun in your world, but not here.
+accepts the name of a programmer, and
+returns the number of lightsabers owned by that person.
+The only person who owns lightsabers is Zach, by the way. He owns 18, which is an awesome number of lightsabers. Anyone else owns 0.
 
-Get rid of them. Only the ending ones.*/
+Note: your function should have a default parameter. */
 
-function noBoringZeros(n) {
-  const numStr = String(n).split('');
-  
-  if (n === 0) {
-    return 0;
-  }
-  
-  for (let i = numStr.length-1; i >= 0; i -= 1) {
-    
-    if (numStr[i] !== '0') {
-      return +(numStr.slice(0, i+1).join(''));
-    }
+function howManyLightsabersDoYouOwn(name) {
+  if (name==="Zach"){
+  return 18
+  }else{
+    return 0
   }
 }

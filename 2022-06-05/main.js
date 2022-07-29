@@ -1,37 +1,18 @@
-/*Build a function that returns an array of integers from n to 1 where n>0.
+/*The pipes connecting your level's stages together need to be fixed before you receive any more complaints.
 
-Example : n=5 --> [5,4,3,2,1]*/
+Pipes list is correct when each pipe after the first index is greater (+1) than the previous one, and that there is no duplicates.
 
-const reverseSeq = n => {
+Task
+
+Given the a list of numbers, return a fixed list so that the values increment by 1 for each index from the minimum value up to the maximum value (both included). */
+
+function pipeFix(numbers){
+  let newArray = numbers.sort((a,b)=>a-b)
+  let min = newArray[0]
+  let max = newArray[newArray.length-1]
   let arr = []
-  for (i=1;i<=n;i++){
+  for (i=min;i<max+1;i++){
     arr.push(i)
   }
-  return arr.reverse()
-};
-
-/*This function should test if the factor is a factor of base.
-
-Return true if it is a factor or false if it is not.*/
-
-function checkForFactor (base, factor) {
-  if (base%factor===0){
-    return true
-  }else{
-    return false
-  }
-}
-
-/*Given a string str, reverse it omitting all non-alphabetic characters.
-
-Example
-
-For str = "krishan", the output should be "nahsirk".
-
-For str = "ultr53o?n", the output should be "nortlu".
-
-*/
-
-function reverseLetter(str) {  
-  return str.split('').reverse().join('').replace(/[^A-Za-z]/g, "")
+  return arr
   }

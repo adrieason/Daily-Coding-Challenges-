@@ -1,11 +1,12 @@
-// Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+/* Messi is a soccer player with goals in three leagues:
 
-function countSheeps(arrayOfSheep) {
-  let sum = 0 
-  for (i=0;i<arrayOfSheep.length;i++){
-    if (arrayOfSheep[i]===true){
-      sum += 1
-    }
-  }
-  return sum
+LaLiga
+Copa del Rey
+Champions
+Complete the function to return his total number of goals in all three leagues.
+
+Note: the input will always be valid. */
+
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals
 }
