@@ -23,3 +23,17 @@ function replace(s){
   }
   return arr.join('')
 }
+
+//better 
+function replace(s){
+  var newS = ''
+  var vowels = "aAeEiIoOuU"
+  for (var i = 0; i < s.length; i++) {
+    if (vowels.indexOf(s[i]) === -1) {
+      newS += s[i]
+    }  else {
+      newS += '!'
+    }
+  }
+  return newS
+}
