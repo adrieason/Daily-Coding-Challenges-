@@ -1,30 +1,19 @@
+/*Given an array of ones and zeroes, convert the equivalent binary value to an integer.
 
-/*In a string we describe a road. There are cars that move to the right and we denote them with ">" and cars that move to the left and we denote them with "<". There are also cameras that are indicated by: " . ". 
-A camera takes a photo of a car if it moves to the direction of the camera.
+Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
 
-Task 
-Your task is to write a function such that, for the input string that represents a road as described, returns the total number of photos that were taken by the cameras. The complexity should be strictly O(N) in order to pass all the tests.*/
+Examples:
 
-function countPhotos(road){
-  let result = 0,
-      cam_count = 0,
-      right_count = 0; //setting variables to 0 
+Testing: [0, 0, 0, 1] ==> 1
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 0, 1] ==> 5
+Testing: [1, 0, 0, 1] ==> 9
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 1, 0] ==> 6
+Testing: [1, 1, 1, 1] ==> 15
+Testing: [1, 0, 1, 1] ==> 11
+However, the arrays can have varying lengths, not just limited to 4.*/ 
 
-  for (let i = 0; i < road.length; ++i) { //looping over the array of elements 
-      if (road[i] == '.') { 
-          result += right_count; //sets result equal to the number of cars counted with right 
-          cam_count += 1;
-      }
-      else if (road[i] == '<') {
-          result += cam_count; //sets results equal to the number of right camereas 
-      }
-      else if (road[i] == '>') {
-          right_count += 1; //adds one to the right count 
-      }
-  }
-  return result;
-}
-
-/*{params} input is a string of ><>< that represent cars and .... that represent cameras. 
-{result} return a number of cars that are facing the camera 
-{example} >.<.< ==> 5 */
+const binaryArrayToNumber = arr => {
+    return parseInt(arr.join(''), 2)
+   };
