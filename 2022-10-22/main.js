@@ -38,7 +38,7 @@ function ballTest(s, r) {
 
     }
   }
-  return s > 0 //if the speed is under one return false
+  return s > 0 //if the speed is under one return false`=
 }
 
 //params/results: input will be a speed (Number) and a string that represents a road with _ and x. x represents a bump.Speed decreases by one with every bump. Every time the ball rools a distance equal to its speed they speed decreases by one. output is true or false to show if the ball is still running at the end. 
