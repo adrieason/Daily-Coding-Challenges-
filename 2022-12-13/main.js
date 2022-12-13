@@ -8,3 +8,28 @@ function pointsPer48(ppg, mpg) {
   }
   return Math.round((ppg*48/mpg)*10)/10
 }
+
+/*Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.*/
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+ var majorityElement = function(arr) {
+  let elem = {} 
+  let count = 0 
+  let majelem = arr[0]
+  for(const num of arr){
+      elem[num] = elem[num] + 1 || 1
+      //elem[num]>arr.length/2
+  }
+ for(const n in elem){
+      if(elem[n]<count){
+          count = elem[n]
+          majelem = n
+      }
+      return majelem
+  }
+};
