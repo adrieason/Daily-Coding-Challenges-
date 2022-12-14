@@ -13,23 +13,25 @@ function pointsPer48(ppg, mpg) {
 
 The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.*/
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
- var majorityElement = function(arr) {
-  let elem = {} 
-  let count = 0 
-  let majelem = arr[0]
+function majorityElement(arr){
+  // arr.sort()
+  // return arr[Math.floor(arr.length/2)]
+  
+  let elem = {},
+      count = 0,
+      majElem = arr[0]
+  
   for(const num of arr){
-      elem[num] = elem[num] + 1 || 1
-      //elem[num]>arr.length/2
+    elem[num] = elem[num] + 1 || 1
+    //elem[num] > arr.length / 2
   }
- for(const n in elem){
-      if(elem[n]<count){
-          count = elem[n]
-          majelem = n
-      }
-      return majelem
-  }
-};
+  
+  for(const n in elem){
+    if(elem[n] > count){
+      count = elem[n]
+      majElem = n
+    }
+  } 
+  
+  return majElem
+}
