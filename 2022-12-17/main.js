@@ -7,6 +7,13 @@ function add(x, y){
  //   count ++
  // }
  // return count
-  
+}
 
+const add = (x, y)  => {
+  while (y != 0) { //while y does not equal 7 
+    const carry = x & y;    //variable carry will equal both x and y
+    x = x ^ y; //x equals c to the power of y 
+    y = carry << 1; //
+ } 
+ return x; 
 }
