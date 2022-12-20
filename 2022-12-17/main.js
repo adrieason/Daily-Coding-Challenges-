@@ -1,19 +1,35 @@
-/*Given Two integers a , b , find The sum of them , BUT You are not allowed to use the operators + and -*/
+/* The accounts of the "Fat to Fit Club (FFC)" association are supervised by John as a volunteered accountant. The association is funded through financial donations from generous benefactors. John has a list of the first n donations: [14, 30, 5, 7, 9, 11, 15] He wants to know how much the next benefactor should give to the association so that the average of the first n + 1 donations should reach an average of 30. After doing the math he found 149. He thinks that he could have made a mistake.*/
 
-function add(x, y){
- // let arr = ([x,y]).sort((a,b)=>a-b)
- // let count = arr[0]
- // for (i=0; i<arr[1]; i++){
- //   count ++
- // }
- // return count
+function newAvg(arr, newavg) {
+    let totalSum = newavg*(arr.length+1)
+    let newSum = arr.reduce((a,b)=>a+b)
+    let num = Math.ceil(totalSum-newSum)
+
+    if (num>=0){
+      return num
+    }else{
+      throw("Expected New Average is too low");
+    }
 }
 
-const add = (x, y)  => {
-  while (y != 0) { //while y does not equal 7 
-    const carry = x & y;    //variable carry will equal both x and y
-    x = x ^ y; //x equals c to the power of y 
-    y = carry << 1; //
- } 
- return x; 
+
+function newAvg(arr, newavg) {
+    if (arr.length === 0) return newavg;
+    const actualAvg = arr.reduce((a,c) => a+c, 0) / arr.length;
+    const amtToAdd = Math.ceil(arr.length * (newavg - actualAvg) + newavg); 
+    if (amtToAdd > 0) return amtToAdd; else throw ('Expected New Average is too low');
+}
+
+##1 - Factorial
+
+/* In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example*/ 
+
+const factorial = n => {
+    if (n == 0) {
+        return 1;
+    }
+
+    else {
+        return n * factorial(n - 1);
+    }
 }
