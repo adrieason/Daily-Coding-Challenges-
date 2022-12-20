@@ -20,7 +20,7 @@ function newAvg(arr, newavg) {
     if (amtToAdd > 0) return amtToAdd; else throw ('Expected New Average is too low');
 }
 
-##1 - Factorial
+/*##1 - Factorial*/
 
 /* In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example*/ 
 
