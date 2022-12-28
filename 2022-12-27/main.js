@@ -3,8 +3,7 @@
 Point objects have x and y attributes (X and Y in C#) attributes.
 
 Write a function calculating distance between Point a and Point b.
-
-Tests round answers to 6 decimal places.*/
+*/
 
 function distanceBetweenPoints(a, b) {
   return Math.sqrt(Math.pow((a.x-b.x),2)+Math.pow((a.y-b.y),2))
@@ -14,7 +13,7 @@ function distanceBetweenPoints(a, b) {
 
 Create an application that will display the number of kilometers per liter (output) based on the number of miles per imperial gallon (input).
 
-Make sure to round off the result to two decimal points.
+Make sure to round off the result to two decimal points.  
 
 Some useful associations relevant to this kata: 1 Imperial Gallon = 4.54609188 litres 1 Mile = 1.609344 kilometres*/
 
