@@ -1,25 +1,23 @@
-/*Given an unsorted array of integers, find the smallest number in the array, the largest number in the array, and the smallest number between the two array bounds that is not in the array.
 
-For instance, given the array [-1, 4, 5, -23, 24], the smallest number is -23, the largest number is 24, and the smallest number between the array bounds is -22. You may assume the input is well-formed.
+/*Every budding hacker needs an alias! The Phantom Phreak, Acid Burn, Zero Cool and Crash Override are some notable examples from the film Hackers.
 
-You solution should return an array [smallest, minimumAbsent, largest]
+Your task is to create a function that, given a proper first and last name, will return the correct alias.
 
-The smallest integer should be the integer from the array with the lowest value.
+Notes:
+Two objects that return a one word name in response to the first letter of the first name and one for the first letter of the surname are already given. See the examples below for further details.
 
-The largest integer should be the integer from the array with the highest value.
+If the first character of either of the names given to the function is not a letter from A - Z, you should return "Your name must start with a letter from A - Z."
 
-The minimumAbsent is the smallest number between the largest and the smallest number that is not in the array.*/
+Sometimes people might forget to capitalize the first letter of their name so your function should accommodate for these grammatical errors.*/
 
-function minMinMax(array) {
-  let answer = [0,0,0]
-  answer[0]=array.sort((a,b)=>a-b)[0]
-  answer[2]=array.sort((a,b)=>a-b)[array.length-1]
-  for (i=answer[0];i<answer[2];i++){
-    if (array.includes(i)!==true){
-      answer[1]=i
-      return answer
+let valueFirst 
+let valueSur
+function aliasGen(name1, name2){
+    if (name1.charCodeAt(0)>64 && name2.charCodeAt(0)<91 && name2.charCodeAt(0)>64 && name2.charCodeAt(0)<91){
+       valueFirst = name1.charAt(0)
+       valueSur = name2.charAt(0)
+      return firstName[name1[0].toUpperCase()] +' '+ surname[name2[0].toUpperCase()]
+    } else {
+      return 'Your name must start with a letter from A - Z.'
     }
-    
-  }
-  return answer
 }
