@@ -5,7 +5,7 @@ A repository that included all of my Daily Coding Challenges.  I do at least one
 ## How It's Made:
 
 **Tech used:** JavaScript
-I solve a coding challenge everyday on Codewars!
+I solve a coding challenge everyday on Codewars or Leetcode!
 
 ## Optimizations
 I refractor and optimize my code, sometimes for efficiency, sometimes for readability.
