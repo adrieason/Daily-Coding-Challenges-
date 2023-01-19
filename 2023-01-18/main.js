@@ -1,4 +1,4 @@
-*Given a node object representing a binary tree:
+/*Given a node object representing a binary tree:
 
 Node:
   value: <int>,
