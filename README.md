@@ -1,9 +1,6 @@
 # Daily-Coding-Challenges- <br> [CodeWars Link](https://www.codewars.com/users/adrieason) <br>[LeetCode Link](https://leetcode.com/adrianname/)<br>
 
-A repository that includes all of my Daily Coding Challenges.  I do at least one coding challenge a day.  
-
-**Tech used:** JavaScript
-I solve a coding challenge everyday on Codewars or Leetcode!
+A repository that includes all of my Daily Coding Challenges. I solve a coding challenge everyday on Codewars or Leetcode! My main language is JavaScript. 
 
 ## Optimizations
 I refractor and optimize my code, sometimes for efficiency, sometimes for readability. I focus on the analysis of the coding challenge. 
