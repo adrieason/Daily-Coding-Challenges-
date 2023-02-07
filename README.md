@@ -1,4 +1,4 @@
-# Daily-Coding-Challenges- Challenges: [CodeWars Link](https://www.codewars.com/users/adrieason) [LeetCode Link] (https://leetcode.com/adrianname/)
+# Daily-Coding-Challenges- Challenges: [CodeWars Link](https://www.codewars.com/users/adrieason) [LeetCode Link](https://leetcode.com/adrianname/)
 
 A repository that includes all of my Daily Coding Challenges.  I do at least one coding challenge a day.  
 
