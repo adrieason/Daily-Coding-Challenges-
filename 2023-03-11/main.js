@@ -1,19 +1,23 @@
-/*Input data:
+/*Please write a function that sums a list, but ignores any duplicate items in the list.
 
-The function receives a parameter n, which indicates the maximum number of points on one domino tile.
+For instance, for the list [3, 4, 3, 6] , the function should return 10.
 
-Test values are 0 < n < 1000
+*/
 
-Output data:
-
-Your function should return the optional number of diamond stones to be made for a given set of dice.*/
-
-function dotsOnDominoBones(n){
-    let sum = 0;
-    for(let i=0; i<=n; i++) {
-        for(let j=i; j<=n; j++) {
-            sum += i + j;
-        }
+function sumNoDuplicates(numList) {
+    let counts = {};
+  
+    for (let i = 0; i < numList.length; i++) {
+      let num = numList[i];
+      counts[num] = counts[num] ? counts[num] + 1 : 1;
     }
+  
+    let sum = 0;
+    for (let num in counts) {
+      if(counts[num] === 1) {
+        sum += Number(num);
+      }
+    }
+  
     return sum;
-}
+  }
